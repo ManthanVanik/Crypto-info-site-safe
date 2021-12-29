@@ -1,0 +1,396 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap');
+
+:root{
+  --text-primary:#000;
+  --bgPrimary:#fff;
+ --bgSecondary: #F9F9F9;
+ --pink: #0d47a1;
+ --light-blue: #e6f7ff;
+ --border: #d9d9d9;
+ --background-nav: #1565c0;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* a:hover{
+  color: #0d47a1 !important;
+} */
+
+.app{
+  overflow: hidden;
+  font-family: 'Poppins', sans-serif;
+ 
+}
+
+.navbar{
+  position: fixed;
+  width: 250px;
+  background-color: var(--background-nav);
+  z-index: 1;
+}
+
+.main{
+  position: relative;
+  padding-left: 250px;
+  width: 100%;
+}
+
+.routes{
+  padding: 20px;
+  background-color: #e3f2fd;
+}
+
+.routes .heading{
+  color: #0d47a1;
+}
+
+.nav-container{
+  height: 100vh;
+  background-color: var(--background-nav);
+  width: 84%;
+  position: relative;
+  margin: auto;
+}
+
+.logo-container{
+  background-color: var(--background-nav);
+  position: relative;
+  padding: 20px;
+  width: 100%;
+}
+
+.logo .logo-name{
+  color: #fff;
+}
+
+.nav-container .nav-menu{
+  background-color: var(--background-nav);
+  border: 0;
+}
+
+.nav-menu .menu-item {
+  color: white;
+}
+
+.menu-item:hover, .icon:hover{
+  color: black !important;
+}
+
+.menu-item .name{
+  color: white;
+}
+
+.menu-item .name:hover{
+  color: black;
+}
+
+.ant-menu-item-selected {
+  background-color: #0d47a1 !important;
+  border-radius: 5px;
+}
+
+.menu-control-container{
+  display: none !important;
+  position: absolute !important;
+  right: 10px !important;
+  top: 50% !important;
+  transform: translateY(-50%);
+  font-size: 1rem !important;
+  background-color: white !important;
+  border: none !important;
+}
+
+.home-stat{
+  background-color: white;
+  padding: 10px 20px;
+  border-radius: 5px;
+  box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.2), 0 2px 4px 0 rgba(0, 0, 0, 0.19);
+}
+
+.home-stat .stat{
+  padding: 10px 0;
+}
+
+.loader{
+  height: 81vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.home-heading-container .home-title{
+  color: #0d47a1;
+  margin-right: 10px;
+}
+
+.home-heading-container .show-more .show-more-in{
+  color: #0d47a1 !important;
+}
+
+@media screen and (max-width:768px){
+  .main{
+    padding-left: 0;
+    margin-top: 15vw;
+    margin-left: 0px;
+    margin-right: 10px;
+  }
+
+  .nav-container{
+    height: 15vw;
+    position:fixed;
+    width: 100%;
+    z-index: 100;
+  }
+
+  .logo-container{
+    padding: 0px;
+    top: 50%;
+    transform: translateY(-50%);
+  }
+
+  .logo-container .logo{
+    margin-left: 10px;
+  }
+
+  .logo-name{
+    font-size: 1.5rem;
+  }
+
+  .menu-control-container{
+      display: block !important;
+  }
+
+  .ant-menu{
+      position: absolute;
+      right: 0px;
+  }
+  .home-title, .heading{
+      font-size: 1.3rem !important;
+  }
+  .show-more{
+      font-size: 1rem !important;
+  }
+}
+
+.coin-detail-container{
+  margin: 30px;
+}
+
+.coin-heading-container{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  border-bottom: 1px solid var(--border);
+  padding-top: 20px;
+  padding-bottom: 20px;
+  gap: 10px;
+}
+
+.coin-heading-container .coin-name{
+  font-weight: 900;
+  color: var(--pink);
+}
+
+.coin-heading-container p{
+  font-size: 1rem;
+  opacity: 0.9;
+  margin-bottom: 20px;
+}
+
+.coin-details{
+  padding: 10px;
+}
+
+.coin-details-heading{
+  font-weight: 700 !important;
+  margin-top: 20px !important;
+  color: var(--pink) !important;
+}
+
+.coin-stats{
+  display: flex;
+  justify-content: space-between;
+  border-bottom: 1px solid var(--border);
+  font-size: 1rem;
+  opacity: 0.9;
+  padding: 20px;
+}
+
+.coin-stats-name{
+  display: flex;
+  gap: 10px;
+  font-size: 1rem;
+}
+
+.stats{
+  font-weight: 800;
+}
+
+.coin-link{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-bottom: 1px solid var(--border);
+  padding: 20px;
+}
+
+.link-name{
+  text-transform: capitalize;
+  font-size: 1rem;
+}
+
+.coin-link a{
+  color: var(--pink);
+  font-weight: 700;
+  font-size: 1rem;
+}
+
+.coin-link:hover, .coin-stats:hover{
+  background-color: var(--bgSecondary);
+}
+
+.select-news{
+  width: 180px;
+}
+.news-card{
+  min-height: 300px !important;
+}
+.news-image-container{
+  display: flex !important;
+  justify-content: space-between !important;
+}
+.news-title{
+width: 70%;
+}
+
+.news-image-container .img{
+  width:100px;
+  height:100px;
+}
+.news-card p{
+  color: black;
+  margin: 10px 0px !important;
+}
+.provider-container{
+  display: flex;
+  justify-content: space-between;
+}
+.provider-name{
+  margin-left: 10px;
+}
+
+.chart-header{
+  display: flex;
+  justify-content: space-between;
+  gap: 50px;
+}
+.chart-title{
+  color: var(--pink) !important;
+}
+.price-container{
+  display: flex !important;
+  gap: 20px !important;
+  align-items: center !important;
+  flex-wrap: wrap !important;
+}
+.price-container .price-change{
+  font-weight: 900 !important;
+  color: var(--pink);
+}
+.price-container .current-price{
+  margin-top: 0px !important;
+  font-weight: 900 !important;
+  color: var(--pink);
+}
+.home-heading-container{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: 40px;
+}
+.show-more{
+  margin-top: 0px !important;
+}
+.search-crypto{
+  margin: 20px auto 30px auto;
+  width: 250px;
+}
+.crypto-card-container{
+  min-height: 65vh !important;
+}
+.crypto-card{
+  min-width: 250px;
+  color: white;
+}
+.crypto-card .card{
+  background-color: #90caf9;
+}
+.crypto-card .crypto-image{
+  width:35px;
+}
+.select-timeperiod{
+  width: 200px !important;
+  margin-top: 20px !important;
+}
+
+.footer {
+  background-color: #2196f3;
+  display: flex;
+  flex-direction: column;
+  padding: 20px;
+  align-items: center;
+}
+.footer-link{
+  color: white;
+  margin: 5px 5px;
+}
+
+.collapse{
+  background-color: white;
+}
+
+.ant-collapse-content{
+  background-color: #bbdefb !important;
+}
+
+.panel{
+  width: 100%;
+}
+
+.exchange-image{
+  margin: 0px 10px !important;
+}
+
+.exchanges-heading{
+  color: #0d47a1;
+  text-align: center;
+  font-weight: bold;
+  margin-bottom: 10px;
+}
+
+.exchange-detail{
+  text-align: center;
+  align-self: center;
+}
+.exchange-detail .exchange-name{
+  text-align: left;
+  align-self: center;
+}
+
+@media screen and (max-width:992px){
+ 
+  .exchange-detail .exchange-name{
+    text-align: center;
+    margin-top: 10px;
+    align-self: center;
+  }
+  .exchange-detail{
+    text-align: center;
+    align-self: center;
+  }
+}
