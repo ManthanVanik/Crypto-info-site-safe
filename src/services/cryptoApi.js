@@ -4,8 +4,6 @@ const baseUrl = "";
 
 const createRequest = (url) => (url)
 
-console.log("called");
-
 export const cryptoApi = createApi({
   reducerPath: 'cryptoApi',
   baseQuery: fetchBaseQuery({baseUrl}),
