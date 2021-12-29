@@ -1,7 +1,6 @@
 import {createApi, fetchBaseQuery} from '@reduxjs/toolkit/query/react'
 
 const baseUrl = "";
-
 const createRequest = (url) => (url)
 
 export const cryptoApi = createApi({
