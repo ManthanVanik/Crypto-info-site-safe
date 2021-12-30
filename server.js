@@ -32,9 +32,11 @@ app.get('/coins', (req, res) =>{
 })
 
 app.get('/exchange', (req, res) =>{
+    const id = req.query.id;
+    const count = req.query.count;
     const options = {
         method: 'GET',
-        url: `https://coinranking1.p.rapidapi.com/exchanges`,
+        url: `https://coinranking1.p.rapidapi.com/coin/${id}/exchanges?limit=${count}`,
         headers:{
             'x-rapidapi-host': 'coinranking1.p.rapidapi.com',
             'x-rapidapi-key': process.env.REACT_APP_RAPID_API_KEY
@@ -72,7 +74,8 @@ app.get('/history', (req, res) =>{
     const time = req.query.time;
     const options = {
         method: 'GET',
-        url: `https://coinranking1.p.rapidapi.com/coin/${id}/history/${time}`,
+        // url: `https://coinranking1.p.rapidapi.com/coin/${id}/history/${time}`,
+        url: `https://coinranking1.p.rapidapi.com/coin/${id}/history?timePeriod=${time}`,
         headers:{
             'x-rapidapi-host': 'coinranking1.p.rapidapi.com',
             'x-rapidapi-key': process.env.REACT_APP_RAPID_API_KEY
