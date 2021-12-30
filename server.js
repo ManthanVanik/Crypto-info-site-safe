@@ -114,13 +114,17 @@ app.use(express.static(path.join(__dirname, "build")));
 app.get('/crypto/:id', (req, res) =>{
     // console.log("reload coin called")
     var pathArray = req.path.split('/');
-    if(isNaN(pathArray[2]))
+    if(!pathArray[2])
     res.json(`${req.path} Page does not Exist`);
     else 
     res.sendFile(path.join(__dirname, "build", "index.html"));
 })
-app.get('/exchanges', (req, res) =>{
-        res.sendFile(path.join(__dirname, "build", "index.html"));
+app.get('/exchanges/:id', (req, res) =>{
+    var pathArray = req.path.split('/');
+    if(!pathArray[2])
+    res.json(`${req.path} Page does not Exist`);
+    else 
+    res.sendFile(path.join(__dirname, "build", "index.html"));
 })
 app.get('/cryptocurrencies', (req, res) =>{
         res.sendFile(path.join(__dirname, "build", "index.html"));
